@@ -1,9 +1,0 @@
-c:\users\michel.guedes.recall\documents\visual studio 2015\Projects\TestesCaelum\TestesCaelum\bin\Debug\TestesCaelum.exe.config
-c:\users\michel.guedes.recall\documents\visual studio 2015\Projects\TestesCaelum\TestesCaelum\bin\Debug\TestesCaelum.exe
-c:\users\michel.guedes.recall\documents\visual studio 2015\Projects\TestesCaelum\TestesCaelum\bin\Debug\TestesCaelum.pdb
-c:\users\michel.guedes.recall\documents\visual studio 2015\Projects\TestesCaelum\TestesCaelum\obj\Debug\TestesCaelum.csprojResolveAssemblyReference.cache
-c:\users\michel.guedes.recall\documents\visual studio 2015\Projects\TestesCaelum\TestesCaelum\obj\Debug\TestesCaelum.Form1.resources
-c:\users\michel.guedes.recall\documents\visual studio 2015\Projects\TestesCaelum\TestesCaelum\obj\Debug\TestesCaelum.Properties.Resources.resources
-c:\users\michel.guedes.recall\documents\visual studio 2015\Projects\TestesCaelum\TestesCaelum\obj\Debug\TestesCaelum.csproj.GenerateResource.Cache
-c:\users\michel.guedes.recall\documents\visual studio 2015\Projects\TestesCaelum\TestesCaelum\obj\Debug\TestesCaelum.exe
-c:\users\michel.guedes.recall\documents\visual studio 2015\Projects\TestesCaelum\TestesCaelum\obj\Debug\TestesCaelum.pdb

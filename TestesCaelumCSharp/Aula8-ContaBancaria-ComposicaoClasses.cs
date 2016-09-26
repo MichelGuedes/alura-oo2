@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TestesCaelumCSharp
 {
-    public partial class Aula8_ContaBancaria_ComposicaoClasses: Form
+    public partial class Aula8_ContaBancaria_ComposicaoClasses : Form
     {
         public Aula8_ContaBancaria_ComposicaoClasses()
         {
@@ -37,9 +37,9 @@ namespace TestesCaelumCSharp
 
         class Conta
         {
-            public int numero;
+            public int Numero { get; set; }
             public Cliente titular;
-            public double saldo;
+            public double Saldo { get; private set; }
 
             /// <summary>
             /// Retira valorASerSacado do atributo saldo
@@ -47,16 +47,16 @@ namespace TestesCaelumCSharp
             /// <param name="valorASerSacado">valor tipo double a ser sacado do atributo saldo da conta</param>
             public void Saque(double valorASerSacado)
             {
-                if ((valorASerSacado > 0) && (valorASerSacado <= this.saldo))
+                if ((valorASerSacado > 0) && (valorASerSacado <= this.Saldo))
                 {
                     //se você tem menos de 18 , só pode sacar até 200 mangos
                     if ((this.titular.idade < 18) && (valorASerSacado > 200))
                     {
-                        saldo -= 200;
+                        Saldo -= 200;
                     }
                     else
                     {
-                        saldo -= valorASerSacado;
+                        Saldo -= valorASerSacado;
                     }
                 }
                 else
@@ -73,7 +73,7 @@ namespace TestesCaelumCSharp
             {
                 if (valorASerDepositado > 0)
                 {
-                    saldo += valorASerDepositado;
+                    Saldo += valorASerDepositado;
                 }
             }
 
@@ -95,14 +95,14 @@ namespace TestesCaelumCSharp
             /// <returns>valor tipo double com o calculo do rendimento</returns>
             public double CalculaRendimentoAnual()
             {
-                double saldoNaqueleMes = this.saldo;
+                double saldoNaqueleMes = this.Saldo;
 
                 for (int i = 1; i <= 12; i++)
                 {
                     saldoNaqueleMes = saldoNaqueleMes * 1.007;
                 }
 
-                return saldoNaqueleMes - this.saldo;
+                return saldoNaqueleMes - this.Saldo;
             }
         }
 
