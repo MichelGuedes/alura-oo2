@@ -38,6 +38,11 @@ namespace TestesCaelumCSharp
             {
                 return this.Idade >= 18;
             }
+
+            public Cliente()
+            {
+
+            }
         }
 
         class Conta
