@@ -19,11 +19,16 @@ namespace TestesCaelumCSharp
 
         class Cliente
         {
-            public string nome;
-            public string rg;
-            public string cpf;
-            public string endereco;
-            public int idade;
+            public string Nome { get; set; }
+            public string Rg { get; set; }
+            public string Cpf { get; set; }
+            public string Endereco { get; set; }
+            public int Idade { get; set; }
+
+            public Cliente (string nomeCliente)
+            {
+                Nome = nomeCliente;
+            }
 
             /// <summary>
             /// Compara a idade atual do Cliente já armazenada no atributo idade
@@ -31,7 +36,7 @@ namespace TestesCaelumCSharp
             /// <returns>Verdadeiro ou falso, dependendo da idade maior ou menor que 18</returns>
             public bool MaiorDeIdade()
             {
-                return this.idade >= 18;
+                return this.Idade >= 18;
             }
         }
 
@@ -50,7 +55,7 @@ namespace TestesCaelumCSharp
                 if ((valorASerSacado > 0) && (valorASerSacado <= this.Saldo))
                 {
                     //se você tem menos de 18 , só pode sacar até 200 mangos
-                    if ((this.titular.idade < 18) && (valorASerSacado > 200))
+                    if ((this.titular.Idade < 18) && (valorASerSacado > 200))
                     {
                         Saldo -= 200;
                     }
@@ -109,21 +114,21 @@ namespace TestesCaelumCSharp
         private void button1_Click(object sender, EventArgs e)
         {
             Conta cnt = new Conta();
-            Cliente cli = new Cliente();
+            Cliente cli = new Cliente("Lucas Guedes");
 
-            cli.nome = "Lucas";
-            cli.rg = "1234";
-            cli.cpf = "4321";
-            cli.endereco = "Guadalajara";
+            cli.Nome = "Lucas";
+            cli.Rg = "1234";
+            cli.Cpf = "4321";
+            cli.Endereco = "Guadalajara";
 
             cnt.titular = cli;
-            cnt.titular.nome = "Lucas Guedes Vieira";
+            cnt.titular.Nome = "Lucas Guedes Vieira";
 
             txtResult.Clear();
-            txtResult.AppendText(cnt.titular.nome + " - " +
-                cnt.titular.endereco + " - " +
-                cnt.titular.rg + " - " +
-                cnt.titular.cpf);
+            txtResult.AppendText(cnt.titular.Nome + " - " +
+                cnt.titular.Endereco + " - " +
+                cnt.titular.Rg + " - " +
+                cnt.titular.Cpf);
         }
     }
 }
